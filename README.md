@@ -24,6 +24,30 @@ While it's technically possible to put all classes in a single file, this projec
 
 ## 🛠️ Environment Setup
 
+### GitHub Codespaces (Recommended)
+
+The easiest way to get started is with GitHub Codespaces, which provides a pre-configured development environment in the cloud.
+
+1. **Open in Codespaces:**
+   - Click the green "Code" button on the GitHub repository
+   - Select "Codespaces" tab
+   - Click "Create codespace on main"
+
+2. **Wait for setup:**
+   - The devcontainer will automatically configure with all required tools
+   - CMake will configure and build the project automatically
+   - All VS Code extensions will be installed
+
+3. **Build and run:**
+   - Press `F5` to build and debug
+   - Or use the terminal: `./build/inheritance_demo`
+
+The devcontainer includes:
+- GCC/G++ compiler
+- CMake build system
+- GDB debugger
+- C++ VS Code extensions
+
 ### Linux (Ubuntu 24.04)
 
 #### Prerequisites
