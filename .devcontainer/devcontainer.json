@@ -1,0 +1,37 @@
+{
+	"name": "C++ Inheritance Demo",
+	"image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
+	
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cmake-tools",
+				"twxs.cmake",
+				"ms-vscode.cpptools-themes"
+			],
+			"settings": {
+				"cmake.configureOnOpen": true,
+				"cmake.buildDirectory": "${workspaceFolder}/build",
+				"cmake.configureSettings": {
+					"CMAKE_BUILD_TYPE": "Debug"
+				},
+				"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+			}
+		}
+	},
+
+	"postCreateCommand": "cmake -B build -S . -DCMAKE_BUILD_TYPE=Debug && cmake --build build",
+
+	"remoteUser": "vscode"
+}
